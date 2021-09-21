@@ -1,6 +1,8 @@
 # Non-Trivial testing problems
 
-To create a usefull comparison, we want to find non-trivial ML problems that can be solved in, preferably, multitude of ways (i.e. log. regression, SVM, NN), and compare it to a hybrid based solution
+To create a usefull comparison, we want to find non-trivial ML problems that can be solved in, preferably, multitude of ways (i.e. log. regression, SVM, NN), and compare it to a hybrid based solution.
+
+
 
 ---
 
