@@ -35,6 +35,8 @@ To switch to it, we can use
 conda activate NAME
 ```
 
+_After turning on your virtual environment, you can install the libraries referenced above!_
+
 To turn it off, we simply write
 ```
 conda deactivate NAME
