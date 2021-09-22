@@ -61,6 +61,24 @@ Some usefull plugins if you are using VSCode are:
 
 To test if your installation was completed correctly, there is a file you can try and run [here](https://github.com/RicardoMonteiroSimoes/ZHAW_PAHS212/blob/main/jupyter/qiskit_test.ipynb)
 
+### IBM Quantum
+
+To have the ability to test our circuits on a real quantum device, you need an account on [IBM Quantum](https://quantum-computing.ibm.com/) as well as a token. The token can be saved locally so you don't have to write it down every time.
+
+#### Setup:
+- Create account on [IBM Quantum](https://quantum-computing.ibm.com/)
+- Copy the token on your profile
+- Open your console
+- Write the following commands:
+```python
+$ python
+>>> from qiskit import IBMQ
+>>> IBMQ.save_account("your token")
+>>>
+```
+- Your token should now be saved locally and usable in a script with `IBMQ.load_account()`
+
+If you have any problems with this setup, consult the [help page](https://quantum-computing.ibm.com/lab/docs/iql/manage/account/ibmq)
 ---
 
 
