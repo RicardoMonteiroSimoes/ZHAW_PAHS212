@@ -82,6 +82,11 @@ If you have any problems with this setup, consult the [help page](https://quantu
 ---
 
 
+# PennyLane
 
+[PennyLane](https://pennylane.ai/)
+
+## Setup
+https://github.com/PennyLaneAI/pennylane#installation
 
 
