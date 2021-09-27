@@ -82,6 +82,18 @@ If you have any problems with this setup, consult the [help page](https://quantu
 ---
 
 
+# PennyLane
 
+[PennyLane](https://pennylane.ai/)
+
+## Setup
+https://github.com/PennyLaneAI/pennylane#installation
+
+
+## jupyter notebooks
+
+To test if your installation was completed correctly, there is a file you can try and run:
+- [pennylane_test](jupyter/pennylane_test.ipynb)
+- [pennylane and qiskit](jupyter/pennylane_qiskit.ipynb)
 
 
