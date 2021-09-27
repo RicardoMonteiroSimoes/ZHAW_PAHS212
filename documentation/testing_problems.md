@@ -38,7 +38,7 @@ The output is a numerical classification of the quality of the wine
 
 ---
 
-### Heart Failure Prediction
+## Heart Failure Prediction
 
 The following [dataset](https://www.kaggle.com/andrewmvd/heart-failure-clinical-data) is a collection of patient data that can be used to train a model to predict if a patient will suffer from heart failure
 
