@@ -467,3 +467,9 @@ cython_debug/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,jupyternotebooks,python,latex
+jupyter/qiskit_gradient.ipynb
+jupyter/qiskit_kernel_ml.ipynb
+jupyter/qiskit_optimizer.ipynb
+.gitignore
+jupyter/torch_connected_qiskit.ipynb
+jupyter/qiskit_qnn_tutorial.ipynb
