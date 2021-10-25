@@ -10,6 +10,8 @@ Related Papers:
 ## Some Basics
 
 ### Basis, Amplitude and Angle embedding
+Quantum Data embedding Methods for Quantum Machine Learning
+
 https://medium.datadriveninvestor.com/all-about-data-encoding-for-quantum-machine-learning-2a7344b1dfef
 
 ### Repeated Amplitude Embedding (special case)
@@ -60,8 +62,8 @@ def get_angles(x):
 | <a href="images/Transformation%20of%20quantum%20states%20using%20uniformly%20controlled%20rotations%20-%20II.png"><img src="images/Transformation%20of%20quantum%20states%20using%20uniformly%20controlled%20rotations%20-%20II.png" alt="" width="50%" /></a> | <a href="images/Transformation%20of%20quantum%20states%20using%20uniformly%20controlled%20rotations%20-%20III.png"><img src="images/Transformation%20of%20quantum%20states%20using%20uniformly%20controlled%20rotations%20-%20III.png" alt="" width="50%" /></a> |
 
 
-## Plots
-I modified the VC to contain amplitude embedding and repeated amplitude embedding for comparison. The following plots show the differences for this two approachs
+## VC Script and Plots
+I created and modified the VC script ([VC_with_pennylane.py](VC_with_pennylane.py)) to contain amplitude embedding and repeated amplitude embedding for comparison. The following plots show the differences for this two approachs
 
 Max. iterations: `250`
 Quantum device used: `default.qubit` (pennylane default)
