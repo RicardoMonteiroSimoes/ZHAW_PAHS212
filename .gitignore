@@ -1,3 +1,5 @@
+.DS_Store
+.vscode
 .dccache
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,jupyternotebooks,python,latex
