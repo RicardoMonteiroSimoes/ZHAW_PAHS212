@@ -1,0 +1,28 @@
+syms alpha_0 alpha_1 alpha_2 alpha_3 omega_0 omega_10 omega_1 omega_11 omega_2 omega_12 omega_3 omega_13
+
+state_zero = [1;0];
+
+RY1 = [[cos(alpha_0/2) -sin(alpha_0/2)];[sin(alpha_0/2) cos(alpha_0/2)]];
+RY2 = [[cos(alpha_1/2) -sin(alpha_1/2)];[sin(alpha_1/2) cos(alpha_1/2)]];
+RY3 = [[cos(alpha_2/2) -sin(alpha_2/2)];[sin(alpha_2/2) cos(alpha_2/2)]];
+
+RYw = [[cos(omega_0/2) -sin(omega_0/2)];[sin(omega_0/2) cos(omega_0/2)]];
+
+CRY10 = [[1 0 0 0];[0 1 0 0];[0 0 cos(omega_10/2) -sin(omega_10/2)];[0 0 sin(omega_10/2) cos(omega_10/2)]];
+
+s1 = RY1*state_zero;
+s2 = RYw*s1;
+qubittwo = RY2*state_zero;
+qubitthree = RY3 * state_zero;
+s3 = kron(s2, qubittwo);
+s4 = CRY10 * s3;
+
+RYw_1 = [[cos(omega_1/2) -sin(omega_1/2)];[sin(omega_1/2) cos(omega_1/2)]];
+RYw_1_wide = kron(eye(2), RYw_1);
+s5 = RYw_1_wide * s4;
+threeqbits = kron(s5, qubitthree);
+CRY11 = kron(eye(2), [[1 0 0 0];[0 1 0 0];[0 0 cos(omega_11/2) -sin(omega_11/2)];[0 0 sin(omega_11/2) cos(omega_11/2)]]);
+s6 = CRY11 * threeqbits;
+RYw_2 = [[cos(omega_2/2) -sin(omega_2/2)];[sin(omega_2/2) cos(omega_2/2)]];
+RYw_2_wide = kron(eye(4), RYw_2);
+s7 = RYw_2_wide * 
