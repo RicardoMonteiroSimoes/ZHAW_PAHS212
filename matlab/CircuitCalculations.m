@@ -1,29 +1,21 @@
-initial_statevector = [1;0;0;0]; %all qubits 0 
+syms alpha_0 alpha_1 alpha_2 alpha_3 omega_0 omega_10 omega_1
 
-zero_state = [1;0];
-one_state = [0;1];
+state_zero = [1;0];
 
-X = [[0 1];[1 0]];
-Y = [[];[]];
-Z = [[];[]];
+RY1 = [[cos(a_0/2) -sin(a_0/2)];[sin(a_0/2) cos(a_0/2)]];
+RY2 = [[cos(a_1/2) -sin(a_1/2)];[sin(a_1/2) cos(a_1/2)]];
 
-CNOT = [[1 0 0 0 ];[0 0 0 1];[0 0 1 0];[0 1 0 0]];
+RYw = [[cos(w_0/2) -sin(w_0/2)];[sin(w_0/2) cos(w_0/2)]];
 
-RX = @(theta) [[cos(theta/2) -1i*sin(theta/2)];[-1i*sin(theta/2) cos(theta/2)]];
-CRX = @(theta) [[1 0 0 0];[0 cos(theta/2) 0 -1i*sin(theta/2)];[0 0 1 0];[0 -1i*sin(theta/2) 0 cos(theta/2)]];
+CRY10 = [[1 0 0 0];[0 1 0 0];[0 0 cos(w_10/2) -sin(w_10/2)];[0 0 sin(w_10/2) cos(w_10/2)]];
 
-RY = @(theta) [[cos(theta/2) -sin(theta/2)];[sin(theta/2) cos(theta/2)]];
-CRY = @(theta) [[1 0 0 0];[0 cos(theta/2) 0 -1*sin(theta/2)];[0 0 1 0];[0 -1*sin(theta/2) 0 cos(theta/2)]];
+psi1 = RY1*state_zero;
+psi2 = RYw*psi1;
 
-RZ = @(lambda) [[exp(-1i*(lambda/2)) 0];[0 exp(1i*(lambda/2))]];
-CRZ = @(lamba) [[1 0 0 0];[0 exp(-1i*(lambda/2)) 0 0];[0 0 1 0];[0 0 0 exp(1i*(lambda/2))]];
+qubittwo = RY2*state_zero;
+psi3 = kron(psi2, qubittwo);
+psi4 = CRY10 * psi3;
 
-x = [-pi:0.01:pi];
-
-z = [];
-
-for n = 1:length(x)
-    ztemp = RY(x(n)) * (RY(x(length(x)-n+1))*zero_state);
-    z(n) = angle(ztemp(1) * 1i * ztemp(2));
-end
-
+RYw_1 = [[cos(w_1/2) -sin(w_1/2)];[sin(w_1/2) cos(w_1/2)]];
+RYw_1_wide = kron(eye(2), RYw_1);
+psi5 = RYw_1_wide * psi4;
