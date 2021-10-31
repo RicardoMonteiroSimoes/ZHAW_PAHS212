@@ -38,10 +38,11 @@ RYw_3_wide = kron(eye(8), RYw_3);
 s10 = RYw_3_wide * s9;
 s11 = CRY13 * s10;
 
+s = sum(alpha)+sum(omega);
 alpha = [pi pi/2 3*pi/4 pi/4];
-alpha = alpha ./ sum(alpha);
+alpha = alpha ./ s;
 omega = [pi/10 pi/5 pi pi/2 pi/15 pi/2 pi/4 pi/6];
-omega = omega ./ sum(omega);
+omega = omega ./ s;
 
 psi9 = s11;
 psi9 = subs(psi9, alpha_0, alpha(1));
