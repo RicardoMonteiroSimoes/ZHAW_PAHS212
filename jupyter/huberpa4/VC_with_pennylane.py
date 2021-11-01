@@ -20,7 +20,6 @@ __location__ = os.path.realpath(
 
 ##################################
 # settings
-# num_qubits => 2 or 4 will be used
 num_layers = 1
 iterations = 1
 
