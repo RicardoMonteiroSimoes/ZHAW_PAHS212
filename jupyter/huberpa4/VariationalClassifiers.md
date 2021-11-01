@@ -2,7 +2,6 @@
 
 Related Papers:
 - https://arxiv.org/pdf/2101.11020.pdf (Maria Schuld)
-- https://arxiv.org/pdf/2101.11020.pdf (Maria Schuld)
 - https://www.mdpi.com/2073-431X/10/6/71/htm
 
 - ebook: https://link.springer.com/book/10.1007/978-3-319-96424-9
