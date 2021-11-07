@@ -20,9 +20,8 @@ __location__ = os.path.realpath(
 
 ##################################
 # settings
-# num_qubits => 2 or 4 will be used
-num_layers = 20
-iterations = 250
+num_layers = 1
+iterations = 1
 
 # batch size and optimizer
 opt_2qubits = NesterovMomentumOptimizer(0.01)
@@ -55,11 +54,16 @@ def get_angles(x):
 def square_loss(labels, predictions):
     loss = 0
     for l, p in zip(labels, predictions):
+        print("label:", l)
+        print("prediction:", p)
         loss = loss + (l - p) ** 2
     loss = loss / len(labels)
+    print("loss", loss)
     return loss
 
 def accuracy(labels, predictions):
+    print("labels --\n",labels)
+    print("predictions --\n",predictions)
     loss = 0
     for l, p in zip(labels, predictions):
         if abs(l - p) < 1e-5:
