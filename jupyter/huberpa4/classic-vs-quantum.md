@@ -1,4 +1,44 @@
-# Costs
+# Heart Failure
+
+## MLPClassifier
+
+| Classic MLPClassifier Accuracy \| Solver: `Adam` | Plot                                                           |
+| :----------------------------------------------- | :------------------------------------------------------------- |
+| [size: 25, hidden layers: 1]:  `88.33%`          | <img src="assets/MLPClassifier_heart-failure_01.png" alt="" /> |
+| [size: 25, hidden layers: 13]:  `91.67%`         | <img src="assets/MLPClassifier_heart-failure_02.png" alt="" /> |
+| [size: 25, hidden layers: 25]:  `93.33%`         | <img src="assets/MLPClassifier_heart-failure_03.png" alt="" /> |
+| [size: 50, hidden layers: 1]:  `90.00%`          | <img src="assets/MLPClassifier_heart-failure_04.png" alt="" /> |
+| [size: 50, hidden layers: 13]:  `93.33%`         | <img src="assets/MLPClassifier_heart-failure_05.png" alt="" /> |
+| [size: 50, hidden layers: 25]:  `91.67%`         | <img src="assets/MLPClassifier_heart-failure_06.png" alt="" /> |
+| [size: 75, hidden layers: 1]:  `86.67%`          | <img src="assets/MLPClassifier_heart-failure_07.png" alt="" /> |
+| [size: 75, hidden layers: 13]:  `90.00%`         | <img src="assets/MLPClassifier_heart-failure_08.png" alt="" /> |
+| [size: 75, hidden layers: 25]:  `93.33%`         | <img src="assets/MLPClassifier_heart-failure_09.png" alt="" /> |
+
+
+## PA Quatum circuit
+
+### Original data
+|                           Quantum Circuit                            | Loss function plot                                                        | Mean Accuracy                                                                                        |
+| :------------------------------------------------------------------: | :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------- |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_01.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_01.png"  alt="" /> | training: `0.5899581589958159`<br />testing: `0.6333333333333333`<br />overall: `0.6020066889632107` |
+### Normalized data
+|                           Quantum Circuit                            | Loss function plot                                                        | Mean Accuracy                                                                                        |
+| :------------------------------------------------------------------: | :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------- |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_01.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_02.png"  alt="" /> | training: `0.6778242677824268`<br />testing: `0.7`<br />overall: `0.6822742474916388`                |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_02.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_03.png"  alt="" /> | training: `0.694560669456067`<br />testing: `0.7166666666666667`<br />overall: `0.7023411371237458`  |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_03.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_04.png"  alt="" /> | training: `0.6694560669456067`<br />testing: `0.7166666666666667`<br />overall: `0.6789297658862876` |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_04.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_05.png"  alt="" /> | training: `0.6861924686192469`<br />testing: `0.7166666666666667`<br />overall: `0.6923076923076923` |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_05.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_06.png"  alt="" /> | training: `0.698744769874477`<br />testing: `0.7166666666666667`<br />overall: `0.6989966555183946`  |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_06.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_07.png"  alt="" /> | training: `0.702928870292887`<br />testing: `0.75`<br />overall: `0.7023411371237458`                |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_07.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_08.png"  alt="" /> | training: `0.6778242677824268`<br />testing: `0.7`<br />overall: `0.6822742474916388`                |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_08.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_09.png"  alt="" /> | training: `0.6694560669456067`<br />testing: `0.7166666666666667`<br />overall: `0.6789297658862876` |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_09.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_10.png"  alt="" /> | training: `0.6694560669456067`<br />testing: `0.7166666666666667`<br />overall: `0.6789297658862876` |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_09.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_10.png"  alt="" /> | training: `0.6694560669456067`<br />testing: `0.7166666666666667`<br />overall: `0.6789297658862876` |
+| <img src="assets/PA-QuantumCicrcuit_heart-failure_10.png"  alt="" /> | <img src="assets/PA-QuantumCicrcuit_heart-failure_plot_11.png"  alt="" /> | training: `0.6736401673640168`<br />testing: `0.7`<br />overall: `0.6822742474916388`                |
+
+
+
+## Pennylane Costs
 
 
 |                                                        Classic = MLPClassifier                                                        |                                                                                            Quantum Hybrid with Pennylane                                                                                             |
